@@ -90,7 +90,17 @@
 
         //In the above example map() is a built in array method that callback function to process each item in array
          /*The callback here doubles each number(num *2) and will return a new array with doubled values*/
-        
+        function registerUser(username, email,callback){
+            console.log("Registering user "+username);
+            setTimeout(function(){
+                console.log("user" +username + "registered sucessfully");
+                callback(email);
+            },2000);
+        }
+        function sendWelcomeEmail(email){
+            console.log("Sending welcome email to "+email);
+        };
+        registerUser("snehitha", "snehitha@gmail.com, sendWelcomeemail")
 
 
     </script>
