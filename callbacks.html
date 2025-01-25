@@ -7,30 +7,93 @@
 </head>
 <body>
     <script>
-        function greet(name,callback){
-            console.log(`Hello, ${name}!`);
-            callback();
+        //function greet(name,callback){
+           // console.log(`Hello, ${name}!`);
+            //callback();
             //this calls the callback function after greeting
-        }
-        function sayGoodbye(){
-            console.log('Goodbye!');
-        }
+        //}
+        //function sayGoodbye(){
+            //console.log('Goodbye!');
+       // }
         //call greet and pass saygoodbye as the callback
-        greet('John',sayGoodbye);
+        //greet('John',sayGoodbye);
 
         //promise
-         let myPromise = new Promise((resolve ,reject)=>
-         {
-            let success = true;
-            if(success){
-                resolve('Task completed')
-            } else{
-                reject('Task failed')
-            }
-         }
+         //let myPromise = new Promise((resolve ,reject)=>
+        // {
+           // let success = true;
+           // if(success){
+                //resolve('Task completed')
+          //  } else{
+            //    reject('Task failed')
+           // }
+        // }
 
-         )
-         myPromise();
+        // )
+         //function mainFunction (callback){
+          //  console.log("Executing main function: ");
+           // callback()
+        // }
+        // function callbackFunction(){
+          //  console.log("Callback function executed");
+        // }
+        // mainFunction(callbackFunction);
+         //mainfunction takes a parameter callback
+         //callbackFunction is passed as an argument to mainfunction inside the mainfunction, the callback function
+
+         //output:
+         //mainfunction(callbackFunction);
+         //it will execute the code inside the mainfunction
+         // it will print (Executing main function:)
+
+         //passing a named function as a callback
+         //function greeting(name, callback){
+          //  console.log("hello" +name);
+          //  callback();
+            //executes the call back function after greeting 
+        // }
+       //  function goodbye(){
+        //    console.log("goodbye");
+        // }
+       //  greeting("snehitha" ,goodbye);
+         
+         //using an anonymus function as a callback
+        
+        // function greet(name,callback){
+         //   console.log("hello" +name);
+          //  callback(); 
+        // }
+        // greet("snehitha",function(){ //anonymus function as a callback
+          //  console.log("goodbye");
+         //})
+
+         //asynchronous callback with setTime out
+       // function fetchData(callback){
+           // console.log("Fetching data...")
+          //  setTimeout(function(){
+            //    console.log("Data fetched");
+           //     callback();
+          // },2000);
+        // }
+        // function processData(){
+          //  console.log("Processing data...");
+        // }
+        // fetchData(processData);
+
+        //using a callback with array methods (map)
+        const numbers = [1,2,3,4,5]
+        const d = numbers.map(function(numbers){
+            return numbers * 2
+        }
+        )
+        console.log(d);
+
+        //In the above example map() is a built in array method that callback function to process each item in array
+         /*The callback here doubles each number(num *2) and will return a new array with doubled values*/
+        
+
+
     </script>
+    
 </body>
 </html>
