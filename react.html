@@ -19,10 +19,55 @@
        // <!-- const element = <h1 className ="a"> Hello JSX! </h1>
        // const root = ReactDOM.createRoot(document.getElementById('app'));
        // root.render(element); -->
-       const n = 10;
-       const m = <h1>React is {n*2} times better than JSX</h1>
-       const r = ReactDOM.createRoot(document.getElementById('app'))
-       r.render(m)
+       //onst n = 10;
+       //const m = <h1>React is {n*2} times better than JSX</h1>
+       //const r = ReactDOM.createRoot(document.getElementById('app'))
+       //r.render(m) 
+       //function getGreeting (name){
+      //  return `Hello ${name}!Welcome to React`
+      // }
+       //function greeting(){
+        //const name = "sai"
+        //return <h1>{getGreeting(name)}</h1>
+       //}
+      // const root = ReactDOM.createRoot(document.getElementById('a'));
+       //root.render(</greeting>)
+      
+       //const element = <h1 className = "one">Hello , JSX! </h1>
+       //const e=document.getElementById("app");
+      // const root = ReactDOM.createRoot(e);
+      // root.render(element);
+      
+      //const e = React.createElement (
+       // 'h1' ,{id,'a'}, "I am snehitha"
+     // )
+     // const element = document.getElementById('app');
+      //const root = ReactDOM.createRoot(element)
+     // root.render(e)
+
+    // const n = 10;
+     //const m = <h1>React is {n*2} times better than JSX</h1>
+     //const root = ReactDOM.createRoot(document.getElementById('app'))
+     //root.render(m);
+
+     const App = () => {
+        const isLoggedIn = false;
+        return (
+            <div>
+               
+                {isLoggedIn ? <h1>Welcome back</h1> : <h1>Please Login First</h1>}
+    
+               
+                {isLoggedIn && <h2>You have new notifications</h2>}
+            </div>
+        );
+    };
+    
+    // Rendering the component
+    const root = ReactDOM.createRoot(document.getElementById('app'));
+    root.render(<App />);
+   
+    
     </script>
 
     
